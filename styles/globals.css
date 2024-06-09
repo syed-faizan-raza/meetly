@@ -1,0 +1,374 @@
+body {
+  background-color: #F4F5FC;
+  margin-left: 5vh;
+}
+
+.dashboard {
+  display: flex;
+  height: 100vh;
+  padding: 0.75vh;
+  background-color: #33333300;
+}
+
+.left-panel {
+  flex: 1 1 65%;
+  margin-right: 0.75vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.right-panel {
+  flex: 1 1 35%;
+  display: flex;
+  flex-direction: column;
+}
+
+.meeting-notes-container,
+.comment-box-container {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 0.75vh;
+  padding: 0.75vh;
+  border: 0.075vh solid #cccccc00;
+}
+
+.meeting-notes .note {
+  margin-bottom: 0.75vh;
+  padding: 0.75vh;
+  border: 0.075vh solid #ddd;
+  border-radius: 0.375vh;
+  background-color: #f9f9f900;
+}
+
+.comment-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.375vh;
+}
+
+.avatar {
+  width: 5vh;
+  height: 5vh;
+  border-radius: 50%;
+  margin-right: 0.75vh;
+}
+
+.avatar-preview {
+  width: 5vh;
+  height: 5vh;
+  border-radius: 50%;
+  margin-bottom: 0.75vh;
+}
+
+.default-avatar {
+  width: 5vh;
+  height: 5vh;
+  border-radius: 50%;
+  background-color: #333;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.75vh;
+}
+
+.comment-box {
+  display: flex;
+  flex-direction: column;
+  margin-top: 26vh;
+}
+
+.comment-box form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-container {
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin-bottom: 0.75vh;
+}
+
+.comment-box input[type="text"] {
+  flex: 1;
+  padding: 2.5vh;
+  border: 0.075vh solid #ccc;
+  border-radius: 3vh;
+  outline: none;
+}
+
+.comment-box .send-button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #007bff00;
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 0.75vh;
+  border-radius: 0 1.125vh 1.125vh 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.comment-box .file-input {
+  margin-bottom: 0.75vh;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5vh;
+  padding: 0.75vh;
+  border: 0.075vh solid #ccc;
+  border-radius: 0.375vh;
+  background-color: #f9f9f9;
+}
+
+.user-info .input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75vh;
+}
+
+.user-info input[type="text"],
+.user-info input[type="file"] {
+  flex: 1;
+  padding: 0.75vh;
+  border: 0.075vh solid #ccc;
+  border-radius: 0.375vh;
+  outline: none;
+}
+
+.user-info .file-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.user-info .file-input-label {
+  background-color: #007bff;
+  color: white;
+  padding: 0.75vh;
+  border-radius: 0.375vh;
+  cursor: pointer;
+  margin-right: 0.75vh;
+}
+
+.user-info .file-input-label:hover {
+  background-color: #0056b3;
+}
+
+.user-info .file-input {
+  display: none;
+}
+
+.user-info .input-group svg {
+  margin-left: 0.75vh;
+  color: #007bff;
+}
+
+.user-info .submit-button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 0.75vh;
+  border-radius: 0.375vh;
+  cursor: pointer;
+  margin-top: 0.75vh;
+}
+
+.user-info .change-name-button {
+  background-color: #ffffff;
+  border: none;
+  color: white;
+  padding: 0.75vh;
+  border-radius: 0.375vh;
+  cursor: pointer;
+  margin-top: 0.75vh;
+}
+
+.comment-box.disabled {
+  opacity: 0.5;
+}
+
+.comment-box .name-required {
+  color: red;
+  margin-top: 0.75vh;
+}
+
+.sign-up-instructions {
+  font-size: 2.2vh;
+  margin-bottom: 0.75vh;
+  color: #333;
+}
+
+.time-bar-container {
+  margin: 1.5vh;
+  margin-left: 0;
+}
+
+.input-container {
+  display: flex;
+  gap: 0.75vh;
+  align-items: center;
+  margin-bottom: 0.75vh;
+}
+
+.time-input {
+  width: 12vh;
+  padding: 0.6vh;
+  font-size: 2.2vh;
+  border: 0.075vh solid #ccc;
+  border-radius: 0.375vh;
+}
+
+.start-button {
+  padding: 0.6vh 0.9vh;
+  font-size: 2.2vh;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 0.375vh;
+  cursor: pointer;
+}
+
+.parent-container {
+  overflow-x: auto;
+}
+
+.time-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'SF UI Text';
+  font-size: 2vh;
+  font-weight: 400;
+  line-height: 2.8vh;
+  text-align: left;
+  color: #222B45;
+}
+
+.time-bar span, .progress-bar {
+  white-space: nowrap;
+  border-radius: 2vh;
+}
+
+.time-info {
+  display: flex;
+  align-items: center;
+}
+
+.progress-bar {
+  width: 30vh;
+  height: 0.8vh;
+  background-color: #D9D9D9;
+  margin-left: 1.5vh;
+  margin-right: 1.5vh;
+}
+
+.progress-bar-inner {
+  height: 100%;
+  transition: width 1s linear;
+  border-radius: 2vh;
+}
+
+.myQuill .ql-container {
+  height: 70vh;
+  background-color: white;
+  border-radius: 1.35vh;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.myQuill .ql-toolbar {
+  background-color: white;
+  border-radius: 1.35vh;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.myQuill .ql-editor {
+  border-left: 1px solid rgba(255, 255, 255, 0);
+  border-right: 1px solid rgba(255, 255, 255, 0);
+  border-bottom: 1px solid rgba(255, 255, 255, 0);
+  border-top: 1px solid rgb(0, 0, 0);
+}
+
+.shared-with {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow-y: auto;
+}
+
+.shared-with p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-1.6vh);
+  font-family: Work Sans;
+  font-size: 2vh;
+  font-weight: 400;
+  line-height: 1.575vh;
+  letter-spacing: -0.025vh;
+  text-align: left;
+}
+
+.user {
+  margin: 0.75vh;
+  text-align: center;
+}
+
+.user .name {
+  text-align: start;
+  margin-right: 1.5vh;
+}
+
+.right-panel h1 {
+  font-family: SF UI Text;
+  font-size: 2.5vh;
+  font-weight: 600;
+  text-decoration: underline;
+  line-height: 2.8vh;
+  text-align: left;
+  margin-top: -8vh;
+  margin-left: 1.5vh;
+}
+
+.header-container {
+  margin: 20px;
+  margin-left: 1.5vh;
+}
+
+.header-container > :first-child {
+  margin: 1vh;
+}
+
+.buttons-container {
+  display: flex;
+  align-items: center;
+  margin-top: 3vh;
+}
+
+.buttons-container .notes-button {
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 1.3vh 3.44vh;
+  margin-left: 1.11vh;
+  cursor: pointer;
+}
+
+.logo {
+  width: 12vh;
+  height: auto;
+  margin-left: -0.3vh!important;
+
+}
+
+
+
