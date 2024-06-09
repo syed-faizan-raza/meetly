@@ -3,7 +3,7 @@ import { PiPencilSimpleLineThin } from "react-icons/pi";
 import { ImStack } from "react-icons/im"; 
 import TimeBar from './TimeBar'
 import Image from 'next/image';
-import logo from './logo.png';
+import logo from '../public/logo.png';
 
 
 const Header = () => {
